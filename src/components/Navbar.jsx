@@ -1,13 +1,14 @@
 import React from "react";
 import Wrapper from "../assets/wrappers/Navbar";
 import { FaAlignLeft } from "react-icons/fa";
+import { useDashboardContext } from "../pages/DashboardLayout";
 import Logo from "./Logo";
 const Navbar = () => {
   const { toggleSidebar } = useDashboardContext();
   return (
     <Wrapper>
       <div className="nav-center">
-        <button type="button" className="toggle-btn">
+        <button type="button" className="toggle-btn" onClick={toggleSidebar}>
           <FaAlignLeft />
         </button>
 
